@@ -1,0 +1,181 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo-mario{
+    height: 200px;
+}
+
+p{
+    color: ghostwhite;
+    font-size: 20px;
+}
+button {
+    background-color: #c51111; /* cor do botao*/
+    color: white;     /* cor da letra do botao*/
+    border-radius: 3px;  /* arredondar borda do botao*/
+    border: none; /* tirar borda */
+    width: 200px; /* largura*/
+    height: 50px; /* altura*/
+    cursor: pointer; /* colocar maozinha*/
+    text-transform: uppercase; /* deixar letra maiuscula do botão*/
+    font-weight: bold;  /* deixar o texto do botao mais grosso*/
+    margin-top: 20px; /* espaço entre o botao e o texto*/
+}
+
+
+.mario-luigi{
+    height: 500px; /* altura da img */
+}
+
+ body{
+    height: 100vh;   /*  o bory ocupar a tela de altura inteira*/ 
+ }
+
+
+ .caixa-mae{
+    display: flex; /* colocar img para o lado, so da para usar os elementos abaixo quando for display flex*/
+    align-items: center; /* alinhamento vertical*/
+    justify-content: space-evenly;  /* alinhamento horizontal*/
+    padding: 100px; /* espaçamento interno*/
+ }
+
+ .caixa-principal{
+    width: 40%;
+ }
+
+ .caixa-video{
+    position: fixed; /* video ficar fixo*/
+    z-index: -1; /* colocar video para traz*/
+    top: 0; /* posicionar o video em cima na tela toda*/
+ }
+
+
+ video{
+    min-height: 100%; 
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+ }
+
+ .mascara{
+    width: 100%; /* largura*/
+    height: 100%; /* altura*/
+    position: fixed;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);/*esurecer o video ou img*/
+    top: 0;
+ }
+
+ .link-whatsapp img {
+    height: 60px; /* altura*/
+    position: fixed;
+    right: 20px; /* jogar para direita*/
+    bottom: 20px; /* jogar tudo para baixo*/
+
+ }
+
+ .cabeça-mario{
+    display: flex;
+    align-items: center;
+    gap: 30px; /* distanciar os elementos*/
+    margin: 30px;
+ }
+
+ .cabeça-mario img {
+    height: 60px;
+ }
+ .cabeça-mario a {
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+ }
+
+.cabeça-mario a:hover{  /*passar o mouse e o link mudar de cor*/
+   color:#c51111;  
+   font-size: 26px;
+   transition: 0.5s ease-in-out;
+}
+
+ button:hover{  /* muda de cor ao passar o mouse*/
+ background-color: #000000; 
+ transition: 0.5s;
+ opacity: 0.7;
+}
+
+.fale-conosco{
+   background-color: white;
+   display: flex;
+   gap: 20px; /* dar espaço entre elementos*/
+   flex-direction: column; /* alinhar em coluna*/
+   position: fixed;
+   left: -230px; /*posicionar à esquerda*/
+   top: 30%; /* posicionar em cima*/
+   padding: 20px; /* espaçamento interno*/
+   border-radius: 5px; /* borda arredondada*/
+   transition: left 1s ease-in-out;
+   
+}
+
+input{
+   height: 40px; /* altura*/
+   border-radius: 5px;
+   border: ipx solid gray;
+   padding-left: 5px; /* espaço à esquerda*/
+   outline-color: #18d80f; /* cor do imput ao clicar*/
+
+}
+textarea{
+   width: 200px; /* largura*/
+   height: 100px; /* altura*/
+   border-radius: 5px;
+   border: ipx solid gray;
+   padding-left: 5px; /* espaço à esquerda*/
+   outline-color: #18d80f; /* cor do imput ao clicar*/
+}
+
+ .mascara1{
+   visibility: hidden; /* mascara fica invisivel*/
+   position: fixed;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+   transition: visibility 1s ease-in-out;
+ }
+
+ @media(max-width: 1100px){
+   p{
+      display: none;
+   }
+   .caixa-mae{
+      flex-direction: column;
+      padding: 10px;
+   }
+   .caixa-principal{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   .mario-luigi{
+      width: 80vw;
+      height: auto;
+   }
+   .cabeça-mario{
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .cabeça-mario img{
+      display: none;
+   }
+   .cabeça-mario a{
+      font-size: 20px;
+   }
+ }
+ 
+ 
+
+    
